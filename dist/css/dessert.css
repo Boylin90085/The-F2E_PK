@@ -135,7 +135,7 @@ header {
       header .container ul.active {
         max-height: 200px;
         visibility: visible; }
-    header .container .material-icons {
+    header .container .cart {
       margin: 0; } }
 
 main {
@@ -220,7 +220,8 @@ main {
             justify-content: space-between;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    max-width: 620px; }
+    max-width: 620px;
+    width: 100%; }
     main .dessertShow .item {
       width: 300px;
       margin-bottom: 20px; }

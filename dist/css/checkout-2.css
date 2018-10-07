@@ -135,7 +135,7 @@ header {
       header .container ul.active {
         max-height: 200px;
         visibility: visible; }
-    header .container .material-icons {
+    header .container .cart {
       margin: 0; } }
 
 main {
