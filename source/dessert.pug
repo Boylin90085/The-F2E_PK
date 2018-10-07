@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+html(lang="zh-Hant-TW")
+  head
+      meta(charset="UTF-8")
+      meta(name="viewport", content="width=device-width, initial-scale=1.0")
+      meta(http-equiv="X-UA-Compatible", content="ie=edge")
+      title Sweetaste* 甜點
+      link(rel="icon", href="../img/logo-dark.jpg")
+      link(rel="stylesheet", href="../public/css/normalize.css")
+      link(rel="stylesheet", href="https://unpkg.com/aos@2.3.1/dist/aos.css")
+      link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons')
+      link(rel="stylesheet", href="css/dessert.css")
+
+  body
+    include component/nav.pug
+    main
+      .banner
+        img(src="../img/svg/lg-noReason.svg", alt="")
+
+      .dessertBox.default
+        .nav
+          .navTitle
+            h3 甜點類別
+          .itemBox
+            .navItem
+              span 所有甜點（48）
+            .navItem
+              span 本日精選（10）
+            .navItem
+              span 人氣推薦（26）
+            .navItem
+              span 新品上市（12）
+        .content
+          .dessertShow
+            .item
+              .imgBox
+                .tag 本日精選
+                img.full(src="../img/dessert/dessert06.jfif", alt="")
+                i.material-icons(data-id="like") favorite_border
+              .info
+                span.name 焦糖馬卡龍
+                span.price NT$ 450
+              .addCart 加入購物車
+            .item
+              .imgBox
+                .tag 本日精選
+                img(src="../img/dessert/dessert01.jfif", alt="")
+                i.material-icons(data-id="like") favorite_border
+              .info
+                span.name 焦糖馬卡龍
+                span.price NT$ 450
+              .addCart 加入購物車
+            .item
+              .imgBox
+                .tag 本日精選
+                img.full(src="../img/dessert/dessert05.jfif", alt="")
+                i.material-icons(data-id="like") favorite_border
+              .info
+                span.name 焦糖馬卡龍
+                span.price NT$ 450
+              .addCart 加入購物車
+            .item
+              .imgBox
+                .tag 本日精選
+                img(src="../img/dessert/dessert07.jfif", alt="")
+                i.material-icons(data-id="like") favorite_border
+              .info
+                span.name 焦糖馬卡龍
+                span.price NT$ 450
+              .addCart 加入購物車
+            .item
+              .imgBox
+                .tag 本日精選
+                img(src="../img/dessert/dessert02.jfif", alt="")
+                i.material-icons(data-id="like") favorite_border
+              .info
+                span.name 焦糖馬卡龍
+                span.price NT$ 450
+              .addCart 加入購物車
+            .item
+              .imgBox
+                .tag 本日精選
+                img(src="../img/dessert/dessert08.jfif", alt="")
+                i.material-icons(data-id="like") favorite_border
+              .info
+                span.name 焦糖馬卡龍
+                span.price NT$ 450
+              .addCart 加入購物車
+          .paginationBox
+            .pa
+              i.material-icons arrow_left
+            .pa
+              span 1
+            .pa
+              span 2
+            .pa
+              span 3
+            .pa
+              i.material-icons arrow_right
+
+    include component/footer.pug
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="https://unpkg.com/aos@2.3.1/dist/aos.js")
+    script(src="js/dessert.js")

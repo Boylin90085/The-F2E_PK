@@ -1,0 +1,97 @@
+header
+  width: 100%
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 100
+  background-color: #fff
+  .container
+    display: flex
+    align-items: center
+    height: 100px
+    img
+      height: 40px
+    ul
+      display: flex
+      margin-left: auto
+      height: 100%
+      a
+        display: inline-flex
+        height: 100%
+        align-items: center
+        padding: 0px 30px
+        text-decoration: none
+        color: $main_color
+        font-weight: bold
+        font-size: 18px
+        &:hover
+          background-color: $main_color
+          color: white
+    .cart
+      margin-left: 49px
+    .material-icons
+      font-size: 24px
+      color: $main_color
+      cursor: pointer
+      &:hover
+        color: $font_color
+  .burger
+    position: relative
+    width: 24px
+    height: 24px
+    cursor: pointer
+    .burger1,.burger2,.burger3
+      position: absolute
+      height: 2px
+      width: 18px
+      border-radius: 4px
+      background-color: $main_color
+      top: 5px
+      left: 10%
+      transition: 350ms
+    .burger2
+      top: 10px
+    .burger3
+      top: 15px
+    &.active
+      .burger1
+        transform: translateY(250%) rotate(45deg)
+      .burger2
+        background-color: transparent
+      .burger3
+        transform: translateY(-250%) rotate(-45deg)
+
+
++mobile-width
+  header
+    .container
+      position: relative
+      padding: 0px 30px
+      height: 84px
+      justify-content: space-between
+      .phone
+        img
+          height: 17.74px
+      ul
+        position: absolute
+        top: 84px
+        left: 0
+        max-height: 0
+        height: auto
+        visibility: hidden
+        overflow: hidden
+        background-color: #fff
+        width: 100%
+        flex-wrap: wrap
+        transition: 500ms
+        li
+          width: 100%
+          a
+            padding: 20px 0px
+            display: block
+            text-align: center
+        &.active
+          max-height: 200px
+          visibility: visible
+      .material-icons
+        margin: 0

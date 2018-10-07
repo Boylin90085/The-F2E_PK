@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+html(lang="zh-Hant-TW")
+  head
+      meta(charset="UTF-8")
+      meta(name="viewport", content="width=device-width, initial-scale=1.0")
+      meta(http-equiv="X-UA-Compatible", content="ie=edge")
+      title Sweetaste* 甜點
+      link(rel="icon", href="../img/logo-dark.jpg")
+      link(rel="stylesheet", href="../public/css/normalize.css")
+      link(rel="stylesheet", href="https://unpkg.com/aos@2.3.1/dist/aos.css")
+      link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons')
+      link(rel="stylesheet", href="css/index.css")
+
+  body
+    include component/nav.pug
+    main
+      .banner
+      .classify.default
+        .itemBox
+          a.item(href="dessert.html").today.feature
+            .cover
+            h2 本日精選
+          a.item(href="dessert.html").hito
+            .cover
+            h2 人氣推薦
+          a.item(href="dessert.html").new
+            .cover
+            h2 新品上市
+      .phoneTitle.phone
+        img(src="../img/svg/sm-whyMake.svg", alt="")
+      .whyMake
+        .default.intro
+          .imgBox
+          .text
+            p 青山依舊在，幾度夕陽紅。慣看秋月春風。一壺濁酒喜相逢，浪花淘盡英雄。是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。
+            br
+            p 是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。
+          img.title(src="../img/svg/lg-whyMake.svg", alt="" data-aos="fade-up")
+      .phoneTitle.phone
+        img(src="../img/svg/sm-whyEat.svg", alt="")
+      .whyEat
+        .default.intro
+          .text
+            p 青山依舊在，幾度夕陽紅。慣看秋月春風。一壺濁酒喜相逢，浪花淘盡英雄。是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。
+            br
+            p 是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。
+          img.title(src="../img/svg/lg-whyEat.svg", alt="" data-aos="fade-up")
+          .imgBox
+      .phoneTitle.phone
+        img(src="../img/svg/sm-noReason.svg", alt="")
+      .slogan.default
+        img(src="../img/svg/lg-noReason.svg", alt="" data-aos="fade-up")
+      .dessertShow.default
+        .item
+          .imgBox
+            .tag 本日精選
+            img(src="../img/dessert/dessert01.jfif", alt="")
+            i.material-icons(data-id="like") favorite_border
+          .info
+            span.name 焦糖馬卡龍
+            span.price NT$ 450
+          .addCart 加入購物車
+        .item
+          .imgBox
+            .tag 本日精選
+            img(src="../img/dessert/dessert02.jfif", alt="")
+            i.material-icons(data-id="like") favorite_border
+          .info
+            span.name 焦糖馬卡龍
+            span.price NT$ 450
+          .addCart 加入購物車
+        .item
+          .imgBox
+            .tag 本日精選
+            img(src="../img/dessert/dessert03.jfif", alt="")
+            i.material-icons(data-id="like") favorite_border
+          .info
+            span.name 焦糖馬卡龍
+            span.price NT$ 450
+          .addCart 加入購物車
+
+    include component/footer.pug
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="https://unpkg.com/aos@2.3.1/dist/aos.js")
+    script(src="js/index.js")

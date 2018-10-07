@@ -1,0 +1,130 @@
+footer
+  width: 100%
+  .content
+    max-width: 1024px
+    margin-right: auto
+    margin-left: auto
+    padding: 0px 122px
+    display: flex
+  .email
+    background-color: $main_color
+    height: 116px
+    .content
+      height: 100%
+      justify-content: space-between
+      align-items: center
+    .title
+      display: flex
+      align-items: center
+      img
+        width: 40px
+        height: 40px
+        margin-right: 20px
+      span
+        font-size: 24px
+        color: $bg_color
+        letter-spacing: normal
+    .input
+      display: flex
+      align-items: center
+      background-color: $bg_color
+      max-width: 380px
+      width: 60%
+      height: 56px
+      .material-icons
+        color: $main_color
+        margin: 0px 16px
+      input
+        background-color: transparent
+        width: 70%
+        border: none
+        outline: none
+      .setBtn
+        position: relative
+        background-color: $focus_color
+        align-self: stretch
+        margin-left: auto
+        width: 56px
+        height: 56px
+        // display: flex
+        // align-items: center
+        cursor: pointer
+        overflow: hidden
+        &:hover
+          .material-icons
+            animation: sentMail 1.2s infinite
+        .material-icons
+          position: absolute
+          top: 50%
+          transform: translateY(-50%)
+          
+  .footerInfo
+    height: 341px
+    background-color: $bg_color
+    .content
+      padding: 30px 122px
+      display: flex
+      height: 100%
+      justify-content: space-between
+    .left
+      display: flex
+      flex-direction: column
+      >img
+        margin-bottom: auto
+        width: 171.22px
+      >p
+        color: $main_color
+        font-weight: bold
+        line-height: 1.8
+    .social
+      margin-top: 30px
+      a
+        display: inline-block
+      a:not(:last-child)
+        margin-right: 8px
+      img
+        width: 32px
+        height: 32px
+    .right
+      display: flex
+      flex-direction: column
+      >img
+        width: 59.28px
+        margin-bottom: auto
+        margin-left: auto
+      >p
+        color: $main_color
+        font-family: serif
+
+@keyframes sentMail
+  from
+    left: -70%
+  to
+    left: 100%
+
+
++mobile-width
+  footer
+    .content
+      flex-direction: column
+    .email
+      height: 186px
+      .content
+        padding: 34px 30px 30px 30px
+      .input
+        width: 100%
+    .footerInfo
+      height: 311px
+      .content
+        padding: 38.9px 30px 30px 30px
+
+      .left
+        >img
+          margin-bottom: 39.5px
+        >p
+          line-height: 1.5
+        .social
+          margin-top: 37px
+      .right
+        img
+          display: none

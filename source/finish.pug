@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+html(lang="zh-Hant-TW")
+  head
+      meta(charset="UTF-8")
+      meta(name="viewport", content="width=device-width, initial-scale=1.0")
+      meta(http-equiv="X-UA-Compatible", content="ie=edge")
+      title Sweetaste* 甜點
+      link(rel="icon", href="../img/logo-dark.jpg")
+      link(rel="stylesheet", href="../public/css/normalize.css")
+      link(rel="stylesheet", href="https://unpkg.com/aos@2.3.1/dist/aos.css")
+      link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons')
+      link(rel="stylesheet", href="css/finish.css")
+
+  body
+    include component/nav.pug
+    main
+      .finishShow.default
+        .content
+          .progress
+            .checkCircle.OK
+              i.material-icons check
+            .checkCircle.OK
+              i.material-icons check
+            .checkCircle.OK
+              i.material-icons check
+          img(src="../img/svg/lg-succsee.svg", alt="")
+          a.btn(href="dessert.html")
+            span 繼續逛逛
+      a.btn.default.w100p(href="dessert.html")
+          span 繼續逛逛
+
+
+      
+
+    include component/footer.pug
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="https://unpkg.com/aos@2.3.1/dist/aos.js")
+    script(src="js/finish.js")

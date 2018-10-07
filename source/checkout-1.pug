@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+html(lang="zh-Hant-TW")
+  head
+      meta(charset="UTF-8")
+      meta(name="viewport", content="width=device-width, initial-scale=1.0")
+      meta(http-equiv="X-UA-Compatible", content="ie=edge")
+      title Sweetaste* 甜點
+      link(rel="icon", href="../img/logo-dark.jpg")
+      link(rel="stylesheet", href="../public/css/normalize.css")
+      link(rel="stylesheet", href="https://unpkg.com/aos@2.3.1/dist/aos.css")
+      link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons')
+      link(rel="stylesheet", href="css/checkout-1.css")
+
+  body
+    include component/nav.pug
+    main
+      .sm_container.default
+        .wrapper.left
+          .insideBox
+            .title
+              h1 運送
+              .progress
+                .checkCircle.active
+                .checkCircle
+                .checkCircle
+            .inputBox
+              .inputItem.w50p.pr8.mb16
+                label(for="") 姓氏
+                .input
+                  input(type="text" placeholder="王")
+              .inputItem.w50p.mb16
+                label(for="") 名字
+                .input
+                  input(type="text" placeholder="小明")
+              .inputItem.w100p.mb16
+                label(for="") 電話
+                .input
+                  input(type="text" placeholder="0912-345-678")
+              .inputItem.w100p
+                label(for="") 地址
+                .row
+                  .input.w50p.mr8
+                    select(name="")
+                      option(value="") 臺北市
+                      option(value="") 新北市
+                      option(value="") 桃園市
+                      option(value="") 臺中市
+                      option(value="") 臺南市
+                      option(value="") 高雄市
+                  .input.w50p
+                    select(name="")
+                      option(value="") 中正區
+                      option(value="") 萬華區
+                      option(value="") 大同區
+                      option(value="") 中山區
+                      option(value="") 松山區
+                      option(value="") 大安區
+                      option(value="") 信義區
+                      option(value="") 內湖區
+                      option(value="") 南港區
+                      option(value="") 士林區
+                      option(value="") 北投區
+                      option(value="") 文山區
+                .input
+                  input(type="text" placeholder="幸福路 520 號")
+          a.btn(href="checkout-2.html")
+            span 下一步
+
+        .wrapper.right
+          .showInfo.mb20
+            .title
+              h2 訂單摘要
+            .content
+              .text.mb10
+                span 小計
+                span NT$ 2,700
+              .text.mb16
+                span 運費
+                span NT$ 300
+              .text.fwb
+                span 總計
+                span NT$ 3,000
+          .showInfo
+            .title
+              h2 購物清單
+            .content
+              .shopItem
+                .imgBox
+                  img(src="../img/dessert/dessert04.jfif", alt="")
+                .info
+                  span 焦糖馬卡龍（2）
+                  span.fwb NT$ 900
+              .shopItem
+                .imgBox
+                  img(src="../img/dessert/dessert02.jfif", alt="")
+                .info
+                  span 焦糖馬卡龍（2）
+                  span.fwb NT$ 900
+              .shopItem
+                .imgBox
+                  img(src="../img/dessert/dessert05.jfif", alt="")
+                .info
+                  span 焦糖馬卡龍（2）
+                  span.fwb NT$ 900
+
+
+    include component/footer.pug
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="https://unpkg.com/aos@2.3.1/dist/aos.js")
+    script(src="js/checkout-1.js")

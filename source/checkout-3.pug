@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+html(lang="zh-Hant-TW")
+  head
+      meta(charset="UTF-8")
+      meta(name="viewport", content="width=device-width, initial-scale=1.0")
+      meta(http-equiv="X-UA-Compatible", content="ie=edge")
+      title Sweetaste* 甜點
+      link(rel="icon", href="../img/logo-dark.jpg")
+      link(rel="stylesheet", href="../public/css/normalize.css")
+      link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons')
+      link(rel="stylesheet", href="css/checkout-3.css")
+
+  body
+    include component/nav.pug
+    main
+      .sm_container.default
+        .wrapper.left
+          .insideBox
+            .title
+              h1 發票
+              .progress
+                .checkCircle.OK
+                  i.material-icons check
+                .checkCircle.OK
+                  i.material-icons check
+                .checkCircle.active
+            .switchBox.w100p.mb30
+              .switchBtn.w50p.active(data-value="eInvoice")
+                span 電子發票
+              .switchBtn.w50p(data-value="mailInvoice")
+                span 郵寄發票
+            .inputBox
+              .inputItem.w100p.mb16.invoice.active(data-id="eInvoice")
+                label(for="") 電子郵件信箱
+                .input
+                  input(type="email" placeholder="example@email.com")
+              .inputItem.w100p.mb16.invoice(data-id="mailInvoice")
+                label(for="") 地址
+                .checkBox
+                  input#sameAddress(type="checkbox", name="")
+                  label.check(for="sameAddress")
+                    i.material-icons check
+                  label(for="sameAddress") 同運送地址
+                .row
+                  .input.w50p.mr8
+                    select(name="")
+                      option(value="") 臺北市
+                      option(value="") 新北市
+                      option(value="") 桃園市
+                      option(value="") 臺中市
+                      option(value="") 臺南市
+                      option(value="") 高雄市
+                  .input.w50p
+                    select(name="")
+                      option(value="") 中正區
+                      option(value="") 萬華區
+                      option(value="") 大同區
+                      option(value="") 中山區
+                      option(value="") 松山區
+                      option(value="") 大安區
+                      option(value="") 信義區
+                      option(value="") 內湖區
+                      option(value="") 南港區
+                      option(value="") 士林區
+                      option(value="") 北投區
+                      option(value="") 文山區
+                .input
+                  input(type="text" placeholder="幸福路 520 號")
+              .inputItem.w100p.mb16
+                label(for="") 統一編號（選填）
+                .input
+                  input(type="text" placeholder="12345678")
+
+          a.btn(href="finish.html")
+            span 確認結帳
+
+        .wrapper.right
+          .showInfo.mb20
+            .title
+              h2 訂單摘要
+            .content
+              .text.mb10
+                span 小計
+                span NT$ 2,700
+              .text.mb16
+                span 運費
+                span NT$ 300
+              .text.fwb
+                span 總計
+                span NT$ 3,000
+          .showInfo
+            .title
+              h2 購物清單
+            .content
+              .shopItem
+                .imgBox
+                  img(src="../img/dessert/dessert04.jfif", alt="")
+                .info
+                  span 焦糖馬卡龍（2）
+                  span.fwb NT$ 900
+              .shopItem
+                .imgBox
+                  img(src="../img/dessert/dessert02.jfif", alt="")
+                .info
+                  span 焦糖馬卡龍（2）
+                  span.fwb NT$ 900
+              .shopItem
+                .imgBox
+                  img(src="../img/dessert/dessert05.jfif", alt="")
+                .info
+                  span 焦糖馬卡龍（2）
+                  span.fwb NT$ 900
+
+
+    include component/footer.pug
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="js/checkout-3.js")

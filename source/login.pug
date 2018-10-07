@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+html(lang="zh-Hant-TW")
+  head
+      meta(charset="UTF-8")
+      meta(name="viewport", content="width=device-width, initial-scale=1.0")
+      meta(http-equiv="X-UA-Compatible", content="ie=edge")
+      title Sweetaste* 甜點
+      link(rel="icon", href="../img/logo-dark.jpg")
+      link(rel="stylesheet", href="../public/css/normalize.css")
+      link(rel="stylesheet", href="https://unpkg.com/aos@2.3.1/dist/aos.css")
+      link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons')
+      link(rel="stylesheet", href="css/login.css")
+
+  body
+    include component/nav.pug
+    main
+      .sm_container.default
+        .wrapper.left
+          .insideBox
+            h1 會員登入
+            .social.phone
+              .socialItem
+                img(src="../img/svg/ic-facebook-logotype.svg", alt="")
+              .socialItem
+                img(src="../img/svg/ic-google.svg", alt="")
+              .socialItem
+                img(src="../img/svg/ic-yahoo.svg", alt="")
+            .inputBox
+              .input
+                i.material-icons person
+                input(type="text" placeholder="電子信箱/手機號碼")
+              .input
+                i.material-icons vpn_key
+                input(type="password" placeholder="請輸入使用者密碼")
+            .checkBox
+              input#remember(type="checkbox", name="")
+              label.check(for="remember")
+                i.material-icons check
+              label(for="remember") 記住我
+          .btn
+            span 登入帳號
+
+        .wrapper.right
+          h2 —— 連結社群帳號 ——
+          a.socialLogin(href="")
+            .img
+              img(src="../img/svg/ic-facebook-logotype.svg", alt="")
+          a.socialLogin(href="")
+            .img
+              img(src="../img/svg/ic-google.svg", alt="")
+          a.socialLogin(href="")
+            .img
+              img(src="../img/svg/ic-yahoo.svg", alt="")
+
+
+    include component/footer.pug
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="https://unpkg.com/aos@2.3.1/dist/aos.js")
+    script(src="js/login.js")

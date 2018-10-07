@@ -1,0 +1,287 @@
+$main_color: #3F5D45
+$focus_color: #FFE180
+$bg_color: #EAF0ED
+$font_color: #8DA291
+
+$phone-media: 768px
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+
+@mixin mobile-width() 
+  @media all and (max-width: $phone-media) 
+    @content;
+
+
+*
+  font-family: "微軟正黑體"
+  box-sizing: border-box
+
+html,body
+  margin: 0
+  padding: 0
+
+ul
+  margin: 0
+  padding: 0
+  list-style: none
+
+.default
+  max-width: 1024px
+  margin-right: auto
+  margin-left: auto
+  padding: 0px 42px
+
+.phone
+  display: none
+
+@import "../component/nav.sass"
+
+main
+  width: 100%
+  height: auto
+  padding-top: 100px
+  padding-bottom: 60px
+  .banner
+    max-width: 940px
+    width: calc(100% - 84px)
+    // padding-bottom: 48.5%;
+    margin-right: auto
+    margin-left: auto
+    background-image: url("../../img/dessert/banner.jfif")
+    height: 496px
+    background-size: cover
+    background-position: center center
+    background-repeat: no-repeat
+  .classify
+    margin-top: -89px
+    margin-bottom: 80px
+    .itemBox
+      padding: 0px 81px
+      display: flex
+      justify-content: center
+    .item:not(:last-child)
+      border-right: 1px solid #fff
+    .item
+      position: relative
+      display: block
+      text-decoration: none
+      max-width: 259.67px
+      width: calc(100% / 3)
+      height: 256px
+      overflow: hidden
+      &:before
+        content: ''
+        position: absolute
+        width: 100%
+        height: 100%
+        background-size: cover
+        background-position: center
+        filter: blur(2px)
+        transition: transform 300ms
+      &:hover
+        &:before
+          transform: scale(1.1)
+      .cover
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        z-index: 0
+        background-color: rgba($main_color,0.8)
+      h2
+        position: absolute
+        top: 50%
+        left: 50%
+        writing-mode: vertical-lr
+        color: white
+        transform: translate(-50%,-50%)
+        letter-spacing: 8px
+        font-weight: normal
+
+    .feature
+      .cover
+        background-color: rgba($focus_color,0.8)
+      h2
+        color: $main_color
+        font-weight: bold
+    .today
+      &:before
+        background-image: url("../../img/dessert/classify01.jfif")
+    .hito
+      &:before
+        background-image: url("../../img/dessert/classify02.jfif")
+    .new
+      &:before
+        background-image: url("../../img/dessert/classify03.jfif")
+
+  .intro
+    height: 420px
+    display: flex
+    justify-content: space-between
+    .imgBox
+      width: 460px
+      height: 460px
+      margin-top: -20px
+      background-size: cover
+      background-position: center
+    .text
+      writing-mode: vertical-rl
+      color: $font_color
+      padding: 70px 0px
+      line-height: 2
+      letter-spacing: 1.5px
+      // font-size: 15px
+    .title
+      margin-top: -22px
+      width: 88.94px
+      align-self: flex-start
+  .whyMake
+    margin-bottom: 105px
+    background-color: $bg_color
+    .imgBox
+      background-image: url("../../img/dessert/whyMake.jfif")
+  .whyEat
+    margin-bottom: 95px
+    background-color: $bg_color
+    .imgBox
+      background-image: url("../../img/dessert/whyEat.jfif")
+
+
+  .slogan
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-bottom: 88px
+    img
+      width: 89.1px
+
+  .dessertShow
+    display: flex
+    justify-content: space-between
+    .item
+      width: 300px
+    .imgBox
+      position: relative
+      width: 100%
+      height: 315px
+      overflow: hidden
+      display: flex
+      align-items: center
+      img
+        width: 100%
+      .tag
+        position: absolute
+        top: 0
+        left: 30px
+        writing-mode: vertical-rl
+        background-color: $main_color
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 36px
+        height: 106.73px
+        color: $bg_color
+        letter-spacing: 4.5px
+        font-weight: bold
+        cursor: default
+      .material-icons
+        position: absolute
+        right: 22px
+        top: 19px
+        color: $main_color
+        cursor: pointer
+    .info
+      font-size: 20px
+      color: $main_color
+      height: 56px
+      display: flex
+      span
+        display: inline-flex
+        justify-content: center
+        align-items: center
+        letter-spacing: 1.1px
+      .name
+        width: 60%
+        border-left: 1px solid $bg_color
+        border-right: 1px solid $bg_color
+      .price
+        width: 40%
+        font-weight: bold
+        border-right: 1px solid $bg_color
+    .addCart
+      display: flex
+      background-color: $bg_color
+      height: 65px
+      justify-content: center
+      align-items: center
+      font-weight: bold
+      font-size: 24px
+      color: $main_color
+      cursor: pointer
+      &:hover
+        background-color: $main_color
+        color: $bg_color
+
+@import "../component/footer.sass"
+
+
++mobile-width
+  .pc
+    display: none
+  .phone
+    display: block
+  .default
+    width: 100%
+    padding: 0
+  main
+    padding-top: 84px
+    padding-bottom: 30px
+    .banner
+      width: 100%
+      height: 277px
+    .classify
+      margin-top: 0
+      margin-bottom: 0
+      .itemBox
+        padding: 0
+      .item
+        width: calc(100% / 3)
+        &:hover
+          &:before
+            transform: scale(1)
+
+    .phoneTitle
+      padding: 30px 0px
+      display: flex
+      justify-content: center
+      img
+        height: 60px
+    .intro
+      flex-direction: column
+      height: auto
+      .title
+        display: none
+      .imgBox
+        width: 100%
+        height: 250px
+        margin-top: 0
+      .text
+        padding: 30px
+        writing-mode: horizontal-tb
+    .whyMake
+      margin-bottom: 0
+    .whyEat
+      margin-bottom: 0
+      .imgBox
+        order: -1
+    .slogan
+      display: none
+    .dessertShow
+      justify-content: center
+      padding: 0px 30px
+      .item:not(:first-child)
+        display: none
+      .item
+        max-width: 315px
+        width: 100%

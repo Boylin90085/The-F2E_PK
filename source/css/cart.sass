@@ -1,0 +1,284 @@
+$main_color: #3F5D45
+$focus_color: #FFE180
+$bg_color: #EAF0ED
+$font_color: #8DA291
+
+$phone-media: 768px
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+
+@mixin mobile-width() 
+  @media all and (max-width: $phone-media) 
+    @content;
+
+
+*
+  font-family: "微軟正黑體"
+  box-sizing: border-box
+
+html,body
+  margin: 0
+  padding: 0
+
+ul
+  margin: 0
+  padding: 0
+  list-style: none
+
+.default
+  max-width: 1024px
+  margin-right: auto
+  margin-left: auto
+  padding: 0px 42px
+
+.phone
+  display: none
+
+@import "../component/nav.sass"
+
+main
+  width: 100%
+  height: auto
+  padding-top: 100px
+  padding-bottom: 60px
+  .cartBox
+    padding-top: 30px
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+  .wrapper
+    // width: 60%
+    // min-height: 380px
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    h1
+      color: $bg_color
+      font-size: 36px
+    h2
+      text-align: center
+      font-size: 24px
+
+    .w100p
+      width: 100%
+    .w50p
+      width: 50%
+    .pr8
+      padding-right: 8px
+    .mr8
+      margin-right: 8px
+    .mb10
+      margin-bottom: 10px
+    .mb16
+      margin-bottom: 16px
+    .mb20
+      margin-bottom: 20px
+    .fwb
+      font-weight: bold
+      font-size: 20px
+    .row
+      display: flex
+
+    .btn
+      width: 100%
+      height: 65px
+      background-color: $focus_color
+      color: $main_color
+      display: flex
+      align-items: center
+      justify-content: center
+      font-size: 24px
+      font-weight: bold
+      text-decoration: none
+      cursor: pointer
+      span
+        position: relative
+        transition: border 200ms
+        font-weight: bold
+        &:before
+          content: ''
+          position: absolute
+          bottom: -2px
+          display: inline-block
+          width: 0%
+          height: 2px
+          background-color: $main_color
+          // animation: border 1s infinite
+      &:hover
+        span
+          &:before
+            animation: border 700ms
+            width: 100%
+
+
+  .mainBox
+    max-width: 620px
+    width: 100%
+    .phoneShow
+      display: none
+    .title
+      display: flex
+      align-items: center
+      justify-content: center
+      height: 65px
+      background-color: $bg_color
+      margin-bottom: 33px
+      h2
+        color: $main_color
+        font-weight: bold
+    .cartInfo
+      width: 100%
+    .cartItem:not(:first-child)
+      padding-top: 20px
+    .cartItem:not(:last-child)
+      padding-bottom: 20px
+      border-bottom: 1px solid $bg_color
+    .cartItem
+      display: flex
+      align-items: center
+      justify-content: space-between
+      .imgBox
+        position: relative
+        width: 110px
+        height: 110px
+        overflow: hidden
+        display: flex
+        align-items: center
+        justify-content: center
+        .full
+          height: 100%
+          width: auto
+        img
+          width: 100%
+      .text
+        display: flex
+        flex-direction: column
+        color: $main_color
+        h4
+          font-size: 20px
+          font-weight: normal
+          margin-bottom: 5px
+      .numBox
+        display: flex
+        height: 48px
+        .numItem:not(:last-child)
+          border-right: none
+        .numItem
+          width: 48px
+          display: flex
+          justify-content: center
+          align-items: center
+          color: $main_color
+          border: 1px solid $bg_color
+          &.click
+            cursor: pointer
+            &:hover
+              background-color: $main_color
+              color: $bg_color
+      .price
+        color: $main_color
+      .material-icons
+        color: $font_color
+        cursor: pointer
+        transition: color 200ms
+        &:hover
+          color: $main_color
+      
+
+
+        
+  .priceInfo
+    width: 300px
+    // margin-right: 20px
+    background-color: $main_color
+    .title
+      color: $bg_color
+      padding-bottom: 16px
+      border-bottom: 1px solid $bg_color
+      margin-bottom: 16px
+    .insideBox
+      width: 100%
+      padding: 16px 20px
+    .text
+      color: $bg_color
+      display: flex
+      justify-content: space-between
+
+
+
+      
+
+
+@keyframes border
+  from
+    width: 0%
+  to
+    width: 100%
+
+@import "../component/footer.sass"
+
++mobile-width
+  .pc
+    display: none !important
+  .phone
+    display: block 
+  .default
+    width: 100%
+    padding: 0
+  main
+    padding-top: 84px
+    padding-bottom: 0px
+    .cartBox
+      padding: 0
+      flex-wrap: wrap
+      .content
+        padding: 0px 30px
+    .wrapper
+      width: 100%
+    .mainBox
+      margin-bottom: 31px
+      .phoneShow
+        display: flex
+        justify-content: space-between
+        width: 100%
+        padding-bottom: 8.5px
+        margin-bottom: 8.5px
+        border-bottom: 1px solid $bg_color
+      .cartItem:not(:first-child)
+        padding-top: 30px
+      .cartItem:not(:last-child)
+        padding-bottom: 8px
+        border-bottom: 1px solid $bg_color
+      .cartItem
+        flex-wrap: wrap
+        
+        padding-bottom: 8px
+        border-bottom: 1px solid $bg_color
+        .imgBox
+          width: 157px
+          height: 106px
+        .text
+          margin-bottom: 8px
+        .price
+          margin-left: auto
+      .content
+        display: flex
+        flex-direction: column
+
+    .priceInfo
+      background-color: #fff
+      .insideBox
+        padding: 0px 30px
+        padding-bottom: 16px
+      .title
+        background-color: $bg_color
+        color: $main_color
+        height: 65px
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 0
+        border: none
+      .text
+        color: $main_color
+    
